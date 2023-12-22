@@ -167,7 +167,7 @@ body {
   justify-content: center;
   padding: 2rem;
   overflow: auto;
-  
+
   animation: left 2s;
 }
 
@@ -187,7 +187,7 @@ body {
   font-size: 1.5rem;
 }
 
-.show-button{
+.show-button {
   position: absolute;
   font-size: 1.2rem;
   top: 2rem;
@@ -308,13 +308,17 @@ body {
 .player .song-info {
   display: flex;
   gap: 1rem;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
 
 .player .song-info .song-info-detail {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.song-artist {
+  font-size: 0.7rem;
 }
 
 .player .song-info .song-image {
@@ -340,8 +344,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 0.7rem;
-  gap: .5rem;
-  font-size: .7rem;
+  gap: 0.5rem;
+  font-size: 0.7rem;
 }
 
 .player .song-duration input {
@@ -394,7 +398,7 @@ body {
   cursor: pointer;
 }
 
-.hide{
+.hide {
   left: 100% !important;
 }
 
@@ -410,17 +414,17 @@ body {
     justify-content: center;
     padding: 2rem;
     overflow: auto;
-    
+
     animation: left 2s;
   }
 }
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
