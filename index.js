@@ -101,7 +101,7 @@ function play(song) {
     return;
   }
   if (nowplaying != currentPlaylistIndex) {
-    audio.src = document.URL + song.path;
+    audio.src = song.path;
     audio.load();
   }
   audio.play();
@@ -117,7 +117,7 @@ function play(song) {
 function loadSongInfo(song) {
   document.getElementById("song-name").innerHTML = song.name;
   document.getElementById("song-artist").innerHTML = song.artist;
-  document.getElementById("song-image").src = document.URL + song.image;
+  document.getElementById("song-image").src = song.image;
 }
 
 function seekTo() {

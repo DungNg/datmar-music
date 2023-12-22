@@ -243,6 +243,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
+  width: calc(100% - 1rem);
 }
 
 .playlist {
