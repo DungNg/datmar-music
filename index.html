@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datmar</title>
+  <link href="./index.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/da034cb3ac.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="./assets/background-video.mov" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="container">
+    <div class="show-button" id="show-button">
+      <i class="fa-solid fa-bars pointer"></i>
+    </div>
+    <div class="sidebar-left" id="sidebar-left">
+      <div class="logo noselect">
+        <div id="hide-button" class="hide-button"><i class="fa-solid fa-close"></i></div>
+        Datmar
+      </div>
+      <div class="socials">
+        <a href="/" class="brands"><i class="fa-brands fa-facebook"></i></a>
+        <a href="/" class="brands"><i class="fa-brands fa-instagram"></i></a>
+        <a href="/" class="brands"><i class="fa-brands fa-youtube"></i></i></a>
+      </div>
+      <div class="category">
+        <select class="category-select" id="category-select" onchange="selectionChange()">
+          <option class="category-option" value="favorite">Favorite</option>
+          <option class="category-option" value="english">English</option>
+          <option class="category-option" value="anime">Anime</option>
+          <option class="category-option" value="vietnam">Vietnamese</option>
+        </select>
+      </div>
+      <div class="playlist" id="playlist">
+        <!--
+        <div class="song">Thay mặt mọi cô gái
+          <i class="fa-solid fa-play"></i>
+        </div> -->
+      </div>
+      <div class="player">
+        <div class="song-info">
+          <img class="song-image" id="song-image">
+          <div class="song-info-detail">
+            <div class="song-name" id="song-name"></div>
+            <div class="song-artist" id="song-artist"></div>
+          </div>
+        </div>
+        <div class="song-duration">
+          <div id="current-time">00:00</div>
+          <input id="seek-slider" type="range" min="1" max="100" value="0" onchange="seekTo()">
+          <div id="total-duration">00:00</div>
+        </div>
+        <div class="song-buttons">
+          <div class="song-control">
+            <div id="repeat-button" class="pointer"><i class="fa-solid fa-repeat"></i></div>
+            <div id="previous-button" class="pointer"><i class="fa-solid fa-backward-step"></i></div>
+            <div id="play-button" class="pointer"><i class="fa-solid fa-play"></i></div>
+            <div id="next-button" class="pointer"><i class="fa-solid fa-forward-step"></i></div>
+          </div>
+
+          <div class="song-volumn">
+            <i class="fa-solid fa-volume-low"></i>
+            <input id="volume-slider" type="range" min="1" max="100" value="100" onchange="setVolume()">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./playlist/favorite.js"></script>
+  <script src="./playlist/english.js"></script>
+  <script src="./playlist/anime.js"></script>
+  <script src="./playlist/vietnam.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
