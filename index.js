@@ -51,10 +51,10 @@ function renderPlaylist(playlist) {
       let playlistIndex = e.target.dataset.index;
       currentPlaylistIndex = playlistIndex;
       loadSongInfo(song);
-      if (isPlaying && nowplaying == currentPlaylistIndex) {
+      if (isPlaying && nowplaying == currentPlaylistIndex && categorySelected == currentPlayingCategory) {
         pause();
       } else {
-        play(song);
+        play(playlist[playlistIndex]);
       }
     });
     div.append(i);
@@ -100,10 +100,17 @@ function play(song) {
   if (!song) {
     return;
   }
+
   if (nowplaying != currentPlaylistIndex) {
     audio.src = song.path;
     audio.load();
   }
+
+  if (currentPlayingCategory != categorySelected) {
+    audio.src = song.path;
+    audio.load();
+  }
+
   audio.play();
 
   nowplaying = currentPlaylistIndex;
@@ -211,9 +218,9 @@ audio.addEventListener("ended", () => {
 hide_button.addEventListener("click", () => {
   sidebar_left.classList.toggle("hide");
   show_button.style.display = "block";
-})
+});
 
 show_button.addEventListener("click", () => {
   sidebar_left.classList.toggle("hide");
   show_button.style.display = "none";
-})
+});
