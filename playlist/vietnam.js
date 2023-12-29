@@ -26,7 +26,7 @@ const playlistVietnam = [
   {
     name: "Từng quen",
     artist: "Wren Evans",
-    image: "images/vietnam/Tanca.jpg",
-    path: "musics/vietnam/Tanca.mp3",
+    image: "images/vietnam/Tungquen.jpg",
+    path: "musics/vietnam/Tungquen.mp3",
   },
 ];
